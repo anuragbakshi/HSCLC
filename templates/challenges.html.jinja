@@ -1,0 +1,531 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}Challenges{% endblock %}
+
+	
+
+{% block content %}
+	<div id="challenges-page" class="aux-content">
+		<link rel="stylesheet" href="/static/flipclock.css">
+		
+
+		<div class="week-problems">
+			{% if start %}
+			<h4>
+					<div style="color:black;">
+						<form method="post" onsubmit="return confirm('Are you sure you want to submit? Your time will expire once you submit.');">
+							<strong>Inuipiat Numerals (80 Points)</strong><br>
+							Yinan Zheng<br><br>
+
+
+							The following operations involve rational numbers that are at most 20:<br><br>
+
+							epeikan etten + epeikan etten = samekip<br>
+							samekip + peggalep = peggalep samekip<br>
+							kakelep + peggalep = nigammipeagen<br>
+							kakelep + peggalep legvin = nigap epeikan<br>
+							peggalep legvin + peggalep samekip = enalaen<br>
+							nigammipeagen + legvin = nigap epeikan<br>
+							apchenkrep etten = peggalep + epeikan etten<br>
+							peggalep + apchenkrep = nigap epeikan<br>
+							peggalep + nigammipeagen = enalaemmipeagen<br>
+							nigap samekip + peggalep legvin = amiammen<br><br>
+
+							<ol>
+								<li>
+									Write the following numerals in the inuit system:<br>
+
+									a) 3
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-1">
+									</div>
+									<br>
+
+									b) 7
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-2">
+									</div>
+									<br>
+
+									c) 9
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-3">
+									</div>
+									<br>
+
+									d) 11
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-4">
+									</div>
+									<br>
+
+									e) 14.5
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-5">
+									</div>
+									<br>
+
+									f) 16
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-6">
+									</div>
+									<br>
+
+									g) 19
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-7">
+									</div>
+								</li>
+								<br><br>
+								<li>
+									The following operations involve numerals that are less than 100:<br><br>
+
+									legvin * amiammen = legvinasaen<br>
+									amiammen peggalep * legvin = legvinasaen nigap<br>
+									legvianasaen * legvin = kakelnasaen<br>
+									kakelnasaen nigap - epeikan = kakelnasaen nigammipeagen<br><br>
+
+									Write the following numerals in the inuit system:<br>
+									a) 46
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-8">
+									</div>
+									<br>
+
+									b) 68
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-9">
+									</div>
+									<br>
+
+									c) 73.5
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-10">
+									</div>
+									<br>
+
+									d) 99
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-11">
+									</div>
+									<br>
+
+									e) 108.5
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-12">
+									</div>
+									<br>
+
+									f) 116
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-13">
+									</div>
+									<br>
+
+									g) 135
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-14">
+									</div>
+								</li>
+								<br><br>
+								<li>
+									Write the following in numeric form:<br>
+
+									a) samekinasaen nigammipeagen
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-15">
+									</div>
+									<br>
+
+									b) apchenkrenasaen nigap epeikan
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-16">
+									</div>
+									<br>
+
+									c) kakelnasaen legvin
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-17">
+									</div>
+									<br>
+
+									d) samekinasaen kakelep etten + amiammen nigammipeagen
+									<div class="form-group">
+										<input class="form-control" type="text" name="1-18">
+									</div>
+								</li>
+							</ol>
+						</div>
+						<hr>
+						<div style="color:black;">
+							<strong>Vowel Words (28 points)</strong><br>
+							Bill Huang<br><br>
+
+							Several sets of words in a certain language and their scrambled translations are shown below.<br><br>
+							
+							<ol>
+								<li>
+									A, AA, AAA, AAAA<br>
+									a) lava
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-1">
+									</div>
+									<br>
+
+									a) network of veins
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-2">
+									</div>
+									<br>
+
+									a) sweet potato
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-3">
+									</div>
+									<br>
+
+									a) of
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-4">
+									</div>
+								</li>
+								<br><br>
+								<li>
+									AE, AEA, AEAE, AEAEA<br>
+									a) kind of tree
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-5">
+									</div>
+									<br>
+
+									a) small green fish
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-6">
+									</div>
+									<br>
+
+									a) to rise up
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-7">
+									</div>
+									<br>
+
+									a) to stretch
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-8">
+									</div>
+								</li>
+								<br><br>
+								<li>
+									AI, AIA, AIAI, AIAIA<br>
+									a) food plant
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-9">
+									</div>
+									<br>
+
+									a) impious
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-10">
+									</div>
+									<br>
+
+									a) there
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-11">
+									</div>
+									<br>
+
+									a) dependent upon another
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-12">
+									</div>
+								</li>
+								<br><br>
+								<li>
+									AO, AOA, AOAO, AOAOA<br>
+									a) to bark
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-13">
+									</div>
+									<br>
+
+									a) boundary
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-14">
+									</div>
+									<br>
+
+									a) daylight
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-15">
+									</div>
+									<br>
+
+									a) small seaside shrub
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-16">
+									</div>
+								</li>
+								<br><br>
+								<li>
+									AU, AUA, AUAU, AUAUA<br>
+									a) to observe
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-17">
+									</div>
+									<br>
+
+									a) elderly man
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-18">
+									</div>
+									<br>
+
+									a) wrinkled skin
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-19">
+									</div>
+									<br>
+
+									a) era
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-20">
+									</div>
+								</li>
+								<br><br>
+								<li>
+									E, I, O, U<br>
+									a) while
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-21">
+									</div>
+									<br>
+
+									a) groan
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-22">
+									</div>
+									<br>
+
+									a) by
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-23">
+									</div>
+									<br>
+
+									a) or
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-24">
+									</div>
+								</li>
+								<br><br>
+								<li>
+									AAE, IEIE, IIAAO, UIA<br>
+									a) variety of taro
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-25">
+									</div>
+									<br>
+
+									a) variety of taro
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-26">
+									</div>
+									<br>
+
+									a) harvested taro patch
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-27">
+									</div>
+									<br>
+
+									a) sour taro
+									<div class="form-group">
+										<input class="form-control" type="text" name="2-28">
+									</div>
+								</li>
+							</ol>
+						</div>
+						<hr>
+						<div style="color:black;">
+							<strong>Mumi's Music Box (14 points)</strong><br>
+							Angela You<br><br>
+
+							Mumi bought a music box from a shady pawn shop to play at her birthday party. It came with several sample songs and a sheet of paper with their transcriptions. These tunes have been transcribed in Sooljimese, a strange method of encoding music that Mumi has never seen before. Help Mumi match the songs to their Sooljimese transcriptions.<br><br>
+
+							All songs are the same length and are played at the same speed. They also all start on the same note. A metronome will play throughout each song to help with the matching process; you can hear it alone here:<br>
+
+							<audio src="//db.tt/w5UTOv12" controls>
+								<a href="/static/meduka/metoronome.wav">metronome</a>
+							</audio><br><br>
+							Match the following images to the songs. (Enter the appropriate letter in each box)<br>
+							A) <img src="/static/meduka/5_.png"><br><br>
+							B) <img src="/static/meduka/6_.png"><br><br>
+							C) <img src="/static/meduka/2_.png"><br><br>
+							D) <img src="/static/meduka/1_.png"><br><br>
+							E) <img src="/static/meduka/7_.png"><br><br>
+							F) <img src="/static/meduka/3_.png"><br><br>
+							G) <img src="/static/meduka/4_.png"><br><br>
+							<br><br>
+
+							a) <audio src="//db.tt/fdvqiRk8" controls></audio>
+							<div class="form-group">
+								<input class="form-control" type="text" name="3-1">
+							</div>
+							<br>
+							b) <audio src="//db.tt/0FqDbJAT" controls></audio>
+							<div class="form-group">
+								<input class="form-control" type="text" name="3-2">
+							</div>
+							<br>
+							c) <audio src="//db.tt/n22aExhE" controls></audio>
+							<div class="form-group">
+								<input class="form-control" type="text" name="3-3">
+							</div>
+							<br>
+							d) <audio src="//db.tt/SU35FkWO" controls></audio>
+							<div class="form-group">
+								<input class="form-control" type="text" name="3-4">
+							</div>
+							<br>
+							e) <audio src="//db.tt/mWBcCiQz" controls></audio>
+							<div class="form-group">
+								<input class="form-control" type="text" name="3-5">
+							</div>
+							<br>
+							f) <audio src="//db.tt/aBRR1HWK" controls></audio>
+							<div class="form-group">
+								<input class="form-control" type="text" name="3-6">
+							</div>
+							<br>
+							g) <audio src="//db.tt/w0Hpjgnh" controls></audio>
+							<div class="form-group">
+								<input class="form-control" type="text" name="3-7">
+							</div>
+						</div>
+						<br>
+						<hr>
+						<br>
+						<button type="submit" id="submit-all" class="btn btn-primary" style="width: 100%;">Submit</button>
+					</form>
+				 {% elif end %}
+					<h3>Final Invitational Round</h3>
+					<!-- screen after completion -->
+					<b>Your contest time has expired for the invitational round. All problems and solutions will be posted after the contest. Please stay tuned for next year's contest!</b>
+				{% else %}
+					<h3>Final Invitational Round</h3>
+					{% if eli %}
+						<!-- screen for top 50 -->
+						<br>
+						<button id="start_button" class="btn btn-success">
+							Start Contest Timer
+						</button>
+						<br>
+						<br>
+						<b>Note: The contest will take 3 hours, so please leave the alloted time free.</b>
+					{% else %}
+						<!-- screen for people below -->
+						<br>
+						<b>Unfortunately, you have not scored in the top 50 to advance to the invitational round. All problems will be posted after the contest. Please stay tuned for next year's contest!</b>
+					{% endif %}
+				{% endif %}
+			</h4>
+		</div>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script src="/static/flipclock.js"></script>
+	
+	<script>
+		function expire() {
+			var d = {'session':"time"};
+			$.ajax({
+				type: 'GET',
+				url: '/user_session',
+				data: d,
+				dataType: 'json',
+				success: function(data,status){
+				}
+			});
+		}
+
+		window.initClock = function() {
+			//$('.clock').empty();
+
+			var a = new Date();
+			//alert(getEndTime());
+			var b = new Date( {{end_time|safe}} );
+
+			var difference = (b - a) / 1000;
+			if (difference <= 0) {
+				expire();
+				window.location.replace("http://hsc.lc/challenges");
+			}
+			
+			window.clock = $('.clock').FlipClock(difference);
+
+			window.clock.setCountdown(true);
+			window.clock.start(function() {});
+		};
+		{% if start %}
+		$(initClock);
+		setInterval(initClock, 2000);
+		{% endif %}
+
+		Date.prototype.addHours= function(h){
+		    this.setHours(this.getHours()+h);
+		    return this;
+		}
+
+		$('#start_button').click(function () {
+			if(confirm("The contest timer will start once you begin. Your session will expire once your time is up. Good luck!")) {
+				var start = new Date();
+				var end = new Date().addHours(3);
+				var d = {'start':start.toUTCString(), 'end':end.toUTCString()};
+				$.ajax({
+					type: "POST",
+					url: '/user_session',
+					data: d,
+					dataType: 'json',
+					success: function(data,status){
+						
+					}
+				});
+				setTimeout(function () {
+					location.reload();
+			    }, 1000);
+			}
+
+		});
+
+		/*$('#submit-all').click(function () {
+			confirm("Are you sure you want to submit? Your time will expire once you submit.");
+		});*/
+
+		$("nav a[href='/challenges']").addClass("active");
+
+		// submit script below
+
+
+
+		
+
+		$("input[type='number']").keydown(function (e) {
+			// Allow: backspace, delete, tab, escape, enter and .
+			if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+				 // Allow: Ctrl+A
+				(e.keyCode == 65 && e.ctrlKey === true) || 
+				 // Allow: home, end, left, right
+				(e.keyCode >= 35 && e.keyCode <= 39)) {
+					 // let it happen, don't do anything
+					 return;
+			}
+			// Ensure that it is a number and stop the keypress
+			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+				e.preventDefault();
+			}
+		});
+	</script>
+{% endblock %}

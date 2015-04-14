@@ -1,0 +1,23 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}Prizes{% endblock %}
+
+{% block content %}
+	<div id="prizes-page" class="aux-content">
+		The top 15 scorers in the preliminary round will advance to the final round and receive
+		<br>
+		<span class="prize-detail">HSCLC T-shirts</span>
+
+		<br><br><br>
+
+		The top 10 scorers in the final round will recieve
+		<br>
+		<span class="prize-detail">1 year of Mathematica and Wolfram Alpha Pro</span>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		$("nav a[href='/prizes']").addClass("active");
+	</script>
+{% endblock %}

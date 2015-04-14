@@ -1,0 +1,29 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+	<div id="about-page" class="aux-content">
+		<p>
+			The High School Computational Linguistics Challenge (HSCLC) is an online computational linguistics competition run by the West Windsor - Plainsboro High School South Programming Club.
+			
+			<br><br>
+			
+			Inspired by the North American Computational Linguistics Olympiad (NACLO), HSCLC poses challenging problems exploring languages and scripts in the context of computational approaches to linguistic analysis. These challenges are essentially language puzzles, requiring only logic and creativity to solve. We throw you into a foreign lingual environment, provide you with a few clues, and leave you to dig yourself out.
+			
+			<br><br>
+			
+			An aspect of NACLO that we'd like to develop more fully in HSCLC is the use of computational methods to expediate language analysis. After all, we're <em>Programming</em> Club. Thus, we'll also pose a few problems with solutions that require coding skills for those who are interested in actually implementing the linguistic analysis paradigms explored more theoretically in the normal challenges. These are, of course, entirely optional.
+			
+			<br><br>
+			
+			We are also excited to provide problems with audiovisual clues alongside text-based clues. After all, linguistics is very much devoted to the study of the spoken word alongside that of written language. The online platform is able to facilitate such clues that would be impossible to present in a written test like NACLO.
+		</p>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		$("nav a[href='/about']").addClass("active");
+	</script>
+{% endblock %}

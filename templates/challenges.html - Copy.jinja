@@ -1,0 +1,636 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}Challenges{% endblock %}
+
+	
+
+{% block content %}
+	<div id="challenges-page" class="aux-content">
+		<link rel="stylesheet" href="/static/flipclock.css">
+		<script>
+		function turnRed(button_id) {
+			$button = $(button_id);
+			$button.attr('class', 'btn btn-danger');
+		}
+
+		function turnGreen(button_id) {
+			$button = $(button_id);
+			$button.attr('class', 'btn btn-success');
+		}
+
+		function disable(button_id) {
+			$button = $(button_id);
+			$button.attr('disabled', 'disabled');
+		}
+	</script>
+		<div class="clock"></div>
+		<h3>Week 3</h4>
+
+		<div class="week-problems">
+			<hr>
+			<h4>
+				<div style="color:black;">
+					<strong>Numbers in Malakalb (30 points)</strong><br>
+					Bill Yan Huang<br><br>
+
+					Some numbers in Malakalb, all less than 69, are given below. Within each row, two of the numbers sum to the third.<br><br> 
+
+					rit tthoyi fsoh, fsohitapr, fsohifsoh<br>
+					rit tthoyi fsoh, fsohitapr, rit fsoh<br>
+					rit tthoyi fsoh, rit fsohi tapr, fsohifsoh<br>
+					rit fsohitapr, rit fsohi tapr, fsohifsoh<br>
+					rit fsohitapr, rit fsoh, rit tthoy<br>
+					rit fsohitapr, amiy tthoy, rit tthoy<br>
+					amiy tthoyi rit fsoh, amiy tthoy, rit fsoh<br>
+					amiy tthoyi rit fsoh, amiy tthoy, amiy fsohi rit fsoh<br>
+					rit tthoyi fsohitapr, amiy fsohi rit fsohitapri fsohitapr, amiy fsohi rit fsoh<br>
+					rit tthoyi fsohitapr, amiy fsohi rit fsohitapri fsohitapr, amiy fsohitapri rit tthoyi tapr<br><br>
+
+					<ol>
+						<li>
+							What is the Malakalb word for: (3 points each)<br><br>
+							a) 1
+							<div class="input-group">
+								<input class="form-control" type="text" name="6-q1">
+								<span class="input-group-btn">
+									<button id="6-q1" class="btn btn-primary">
+										{% if prob6[1] == "0" %}
+											Submit (3 tries left)
+										{% elif prob6[1] != "3" %}
+											<script> turnRed('#6-q1'); </script>
+											{{ prob6[0] }} Points Awarded ({{ 3- prob6[1]|int }} tries left)
+										{% else %}
+											{% if prob6[0] == "3" %}
+												3 Points Awarded
+												
+											{% else %}
+												{{ prob6[0] }} Points Awarded (0 tries left)
+												<script> turnRed('#6-q1'); </script>
+											{% endif %}
+											<script> disable('#6-q1'); </script>
+										{% endif %}
+									</button>
+								</span>
+							</div>
+							<br>
+
+							b) 2
+							<div class="input-group">
+								<input class="form-control" type="text" name="6-q2">
+								<span class="input-group-btn">
+									<button id="6-q2" class="btn btn-primary">
+										{% if prob6[1*2+1] == "0" %}
+											Submit (3 tries left)
+										{% elif prob6[1*2+1] != "3" %}
+											<script> turnRed('#6-q2'); </script>
+											{{ prob6[1*2] }} Points Awarded ({{ 3- prob6[1*2+1]|int }} tries left)
+										{% else %}
+											{% if prob6[1*2] == "3" %}
+												3 Points Awarded
+											{% else %}
+												{{ prob6[1*2] }} Points Awarded (0 tries left)
+												<script> turnRed('#6-q2'); </script>
+											{% endif %}
+											<script> disable('#6-q2'); </script>
+										{% endif %}
+									</button>
+								</span>
+							</div>
+						</li>
+						<br><br>
+						<li>
+							Translate into Arabic numerals: (4 points each)<br><br>
+							a) amiy fsohitapri rit tthoyi fsohifsoh
+							<div class="input-group">
+								<input class="form-control" type="text" name="6-q3">
+								<span class="input-group-btn">
+									<button id="6-q3" class="btn btn-primary">
+										{% if prob6[2*2+1] == "0" %}
+											Submit (3 tries left)
+										{% elif prob6[2*2+1] != "3" %}
+											<script> turnRed('#6-q3'); </script>
+											{{ prob6[2*2] }} Points Awarded ({{ 3- prob6[2*2+1]|int }} tries left)
+										{% else %}
+											{% if prob6[2*2] == "4" %}
+												4 Points Awarded
+											{% else %}
+												{{ prob6[2*2] }} Points Awarded (0 tries left)
+												<script> turnRed('#6-q3'); </script>
+											{% endif %}
+											<script> disable('#6-q3'); </script>
+										{% endif %}
+									</button>
+								</span>
+							</div>
+							<br>
+
+							b) amiy fsohi tapr
+							<div class="input-group">
+								<input class="form-control" type="text" name="6-q4">
+								<span class="input-group-btn">
+									<button id="6-q4" class="btn btn-primary">{% if prob6[3*2+1] == "0" %}Submit (3 tries left){% elif prob6[3*2+1] != "3" %}<script> turnRed('#6-q4'); </script>{{ prob6[3*2] }} Points Awarded ({{ 3- prob6[3*2+1]|int }} tries left){% else %}{% if prob6[3*2] == "4" %}4 Points Awarded{% else %}{{ prob6[3*2] }} Points Awarded (0 tries left)<script> turnRed('#6-q4'); </script>{% endif %}<script> disable('#6-q4'); </script>{% endif %}</button>
+								</span>
+							</div>
+						</li>
+						<br><br>
+						<li>
+							Find the sum of the following Malakalb numbers and write your answer in Malakalb: (8 points for exact)<br><br>
+							fsohifsoh + amiy fsohifsohi fsohifsoh
+							<div class="input-group">
+								<input class="form-control" type="text" name="6-q5">
+								<span class="input-group-btn">
+									<button id="6-q5" class="btn btn-primary">{% if prob6[4*2+1] == "0" %}Submit (3 tries left){% elif prob6[4*2+1] != "3" %}<script> turnRed('#6-q5'); </script>{{ prob6[4*2] }} Points Awarded ({{ 3- prob6[4*2+1]|int }} tries left){% else %}{% if prob6[4*2] == "8" %}8 Points Awarded{% else %}{{ prob6[4*2] }} Points Awarded (0 tries left)<script> turnRed('#6-q5'); </script>{% endif %}<script> disable('#6-q5'); </script>{% endif %}</button>
+								</span>
+							</div>
+						</li>
+						<br><br>
+						<li>
+							Each of the following Malakalb numbers has an error. Fix it: (4 points for exact)<br><br>
+							a) rit tapri tapr
+							<div class="input-group">
+								<input class="form-control" type="text" name="6-q6">
+								<span class="input-group-btn">
+									<button id="6-q6" class="btn btn-primary">{% if prob6[5*2+1] == "0" %}Submit (3 tries left){% elif prob6[5*2+1] != "3" %}<script> turnRed('#6-q6'); </script>{{ prob6[5*2] }} Points Awarded ({{ 3- prob6[5*2+1]|int }} tries left){% else %}{% if prob6[5*2] == "4" %}4 Points Awarded{% else %}{{ prob6[5*2] }} Points Awarded (0 tries left)<script> turnRed('#6-q6'); </script>{% endif %}<script> disable('#6-q6'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							b) amiy tthoyi rparitpat
+							<div class="input-group">
+								<input class="form-control" type="text" name="6-q7">
+								<span class="input-group-btn">
+									<button id="6-q7" class="btn btn-primary">{% if prob6[6*2+1] == "0" %}Submit (3 tries left){% elif prob6[6*2+1] != "3" %}<script> turnRed('#6-q7'); </script>{{ prob6[6*2] }} Points Awarded ({{ 3- prob6[6*2+1]|int }} tries left){% else %}{% if prob6[6*2] == "4" %}4 Points Awarded{% else %}{{ prob6[6*2] }} Points Awarded (0 tries left)<script> turnRed('#6-q7'); </script>{% endif %}<script> disable('#6-q7'); </script>{% endif %}</button>
+								</span>
+							</div>
+						</li>
+					</ol>
+				</div>
+				
+				<hr>
+
+				<div style="color:black;">
+					<strong>Colors in Languages (24 points)</strong><br>
+					Bill Huang<br><br>
+
+					<ol>
+						<li>
+							Given below are several names of colors in 3 different languages chosen from 6 possible colors: black, white, red, yellow, blue, green. Your task is to figure out which colors they correspond to. (12 points)<br><br>
+
+							Language 1:<br><br>
+							a) vermella
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q1">
+								<span class="input-group-btn">
+									<button id="7-q1" class="btn btn-primary">{% if prob7[0*2+1] == "0" %}Submit (3 tries left){% elif prob7[0*2+1] != "3" %}<script> turnRed('#7-q1'); </script>{{ prob7[0*2] }} Points Awarded ({{ 3- prob7[0*2+1]|int }} tries left){% else %}{% if prob7[0*2] == "1" %}1 Points Awarded{% else %}{{ prob7[0*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q1'); </script>{% endif %}<script> disable('#7-q1'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							b) verde
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q2">
+								<span class="input-group-btn">
+									<button id="7-q2" class="btn btn-primary">{% if prob7[1*2+1] == "0" %}Submit (3 tries left){% elif prob7[1*2+1] != "3" %}<script> turnRed('#7-q2'); </script>{{ prob7[1*2] }} Points Awarded ({{ 3- prob7[1*2+1]|int }} tries left){% else %}{% if prob7[1*2] == "1" %}1 Points Awarded{% else %}{{ prob7[1*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q2'); </script>{% endif %}<script> disable('#7-q2'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							c) branco
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q3">
+								<span class="input-group-btn">
+									<button id="7-q3" class="btn btn-primary">{% if prob7[2*2+1] == "0" %}Submit (3 tries left){% elif prob7[2*2+1] != "3" %}<script> turnRed('#7-q3'); </script>{{ prob7[2*2] }} Points Awarded ({{ 3- prob7[2*2+1]|int }} tries left){% else %}{% if prob7[2*2] == "1" %}1 Points Awarded{% else %}{{ prob7[2*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q3'); </script>{% endif %}<script> disable('#7-q3'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							d) amarela
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q4">
+								<span class="input-group-btn">
+									<button id="7-q4" class="btn btn-primary">{% if prob7[3*2+1] == "0" %}Submit (3 tries left){% elif prob7[3*2+1] != "3" %}<script> turnRed('#7-q4'); </script>{{ prob7[3*2] }} Points Awarded ({{ 3- prob7[3*2+1]|int }} tries left){% else %}{% if prob7[3*2] == "1" %}1 Points Awarded{% else %}{{ prob7[3*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q4'); </script>{% endif %}<script> disable('#7-q4'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							Language 2:<br><br>
+							a) wyt
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q5">
+								<span class="input-group-btn">
+									<button id="7-q5" class="btn btn-primary">{% if prob7[4*2+1] == "0" %}Submit (3 tries left){% elif prob7[4*2+1] != "3" %}<script> turnRed('#7-q5'); </script>{{ prob7[4*2] }} Points Awarded ({{ 3- prob7[4*2+1]|int }} tries left){% else %}{% if prob7[4*2] == "1" %}1 Points Awarded{% else %}{{ prob7[4*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q5'); </script>{% endif %}<script> disable('#7-q5'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							b) swart
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q6">
+								<span class="input-group-btn">
+									<button id="7-q6" class="btn btn-primary">{% if prob7[5*2+1] == "0" %}Submit (3 tries left){% elif prob7[5*2+1] != "3" %}<script> turnRed('#7-q6'); </script>{{ prob7[5*2] }} Points Awarded ({{ 3- prob7[5*2+1]|int }} tries left){% else %}{% if prob7[5*2] == "1" %}1 Points Awarded{% else %}{{ prob7[5*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q6'); </script>{% endif %}<script> disable('#7-q6'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							c) giel
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q7">
+								<span class="input-group-btn">
+									<button id="7-q7" class="btn btn-primary">{% if prob7[6*2+1] == "0" %}Submit (3 tries left){% elif prob7[6*2+1] != "3" %}<script> turnRed('#7-q7'); </script>{{ prob7[6*2] }} Points Awarded ({{ 3- prob7[6*2+1]|int }} tries left){% else %}{% if prob7[6*2] == "1" %}1 Points Awarded{% else %}{{ prob7[6*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q7'); </script>{% endif %}<script> disable('#7-q7'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							d) grien
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q8">
+								<span class="input-group-btn">
+									<button id="7-q8" class="btn btn-primary">{% if prob7[7*2+1] == "0" %}Submit (3 tries left){% elif prob7[7*2+1] != "3" %}<script> turnRed('#7-q8'); </script>{{ prob7[7*2] }} Points Awarded ({{ 3- prob7[7*2+1]|int }} tries left){% else %}{% if prob7[7*2] == "1" %}1 Points Awarded{% else %}{{ prob7[7*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q8'); </script>{% endif %}<script> disable('#7-q8'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							Language 3:<br><br>
+							a) blau
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q9">
+								<span class="input-group-btn">
+									<button id="7-q9" class="btn btn-primary">{% if prob7[8*2+1] == "0" %}Submit (3 tries left){% elif prob7[8*2+1] != "3" %}<script> turnRed('#7-q9'); </script>{{ prob7[8*2] }} Points Awarded ({{ 3- prob7[8*2+1]|int }} tries left){% else %}{% if prob7[8*2] == "1" %}1 Points Awarded{% else %}{{ prob7[8*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q9'); </script>{% endif %}<script> disable('#7-q9'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							b) berdè
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q10">
+								<span class="input-group-btn">
+									<button id="7-q10" class="btn btn-primary">{% if prob7[9*2+1] == "0" %}Submit (3 tries left){% elif prob7[9*2+1] != "3" %}<script> turnRed('#7-q10'); </script>{{ prob7[9*2] }} Points Awarded ({{ 3- prob7[9*2+1]|int }} tries left){% else %}{% if prob7[9*2] == "1" %}1 Points Awarded{% else %}{{ prob7[9*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q10'); </script>{% endif %}<script> disable('#7-q10'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							c) kòrá
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q11">
+								<span class="input-group-btn">
+									<button id="7-q11" class="btn btn-primary">{% if prob7[10*2+1] == "0" %}Submit (3 tries left){% elif prob7[10*2+1] != "3" %}<script> turnRed('#7-q11'); </script>{{ prob7[10*2] }} Points Awarded ({{ 3- prob7[10*2+1]|int }} tries left){% else %}{% if prob7[10*2] == "1" %}1 Points Awarded{% else %}{{ prob7[10*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q11'); </script>{% endif %}<script> disable('#7-q11'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							d) blanku
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q12">
+								<span class="input-group-btn">
+									<button id="7-q12" class="btn btn-primary">{% if prob7[11*2+1] == "0" %}Submit (3 tries left){% elif prob7[11*2+1] != "3" %}<script> turnRed('#7-q12'); </script>{{ prob7[11*2] }} Points Awarded ({{ 3- prob7[11*2+1]|int }} tries left){% else %}{% if prob7[11*2] == "1" %}1 Points Awarded{% else %}{{ prob7[11*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q12'); </script>{% endif %}<script> disable('#7-q12'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+						</li>
+						<br><br>
+						<li>
+							Given below are the names of all the basic colors in 2 different languages. Figure out which color(s) of the 6 (black, white, red, yellow, blue, green) each term corresponds to. (12 points)<br><br>
+
+							Language 1: yi', so'a, si'be, bu'ti<br><br>
+							a) black
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q13">
+								<span class="input-group-btn">
+									<button id="7-q13" class="btn btn-primary">{% if prob7[12*2+1] == "0" %}Submit (3 tries left){% elif prob7[12*2+1] != "3" %}<script> turnRed('#7-q13'); </script>{{ prob7[12*2] }} Points Awarded ({{ 3- prob7[12*2+1]|int }} tries left){% else %}{% if prob7[12*2] == "1" %}1 Points Awarded{% else %}{{ prob7[12*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q13'); </script>{% endif %}<script> disable('#7-q13'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							
+							b) white
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q14">
+								<span class="input-group-btn">
+									<button id="7-q14" class="btn btn-primary">{% if prob7[13*2+1] == "0" %}Submit (3 tries left){% elif prob7[13*2+1] != "3" %}<script> turnRed('#7-q14'); </script>{{ prob7[13*2] }} Points Awarded ({{ 3- prob7[13*2+1]|int }} tries left){% else %}{% if prob7[13*2] == "1" %}1 Points Awarded{% else %}{{ prob7[13*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q14'); </script>{% endif %}<script> disable('#7-q14'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							
+							c) red
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q15">
+								<span class="input-group-btn">
+									<button id="7-q15" class="btn btn-primary">{% if prob7[14*2+1] == "0" %}Submit (3 tries left){% elif prob7[14*2+1] != "3" %}<script> turnRed('#7-q15'); </script>{{ prob7[14*2] }} Points Awarded ({{ 3- prob7[14*2+1]|int }} tries left){% else %}{% if prob7[14*2] == "1" %}1 Points Awarded{% else %}{{ prob7[14*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q15'); </script>{% endif %}<script> disable('#7-q15'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							
+							d) yellow
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q16">
+								<span class="input-group-btn">
+									<button id="7-q16" class="btn btn-primary">{% if prob7[15*2+1] == "0" %}Submit (3 tries left){% elif prob7[15*2+1] != "3" %}<script> turnRed('#7-q16'); </script>{{ prob7[15*2] }} Points Awarded ({{ 3- prob7[15*2+1]|int }} tries left){% else %}{% if prob7[15*2] == "1" %}1 Points Awarded{% else %}{{ prob7[15*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q16'); </script>{% endif %}<script> disable('#7-q16'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							
+							e) green
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q17">
+								<span class="input-group-btn">
+									<button id="7-q17" class="btn btn-primary">{% if prob7[16*2+1] == "0" %}Submit (3 tries left){% elif prob7[16*2+1] != "3" %}<script> turnRed('#7-q17'); </script>{{ prob7[16*2] }} Points Awarded ({{ 3- prob7[16*2+1]|int }} tries left){% else %}{% if prob7[16*2] == "1" %}1 Points Awarded{% else %}{{ prob7[16*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q17'); </script>{% endif %}<script> disable('#7-q17'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+							
+							f) blue
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q18">
+								<span class="input-group-btn">
+									<button id="7-q18" class="btn btn-primary">{% if prob7[17*2+1] == "0" %}Submit (3 tries left){% elif prob7[17*2+1] != "3" %}<script> turnRed('#7-q18'); </script>{{ prob7[17*2] }} Points Awarded ({{ 3- prob7[17*2+1]|int }} tries left){% else %}{% if prob7[17*2] == "1" %}1 Points Awarded{% else %}{{ prob7[17*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q18'); </script>{% endif %}<script> disable('#7-q18'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							Language 2: ii, pupu, nyian, brambo, linz<br><br>
+							a) black
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q19">
+								<span class="input-group-btn">
+									<button id="7-q19" class="btn btn-primary">{% if prob7[18*2+1] == "0" %}Submit (3 tries left){% elif prob7[18*2+1] != "3" %}<script> turnRed('#7-q19'); </script>{{ prob7[18*2] }} Points Awarded ({{ 3- prob7[18*2+1]|int }} tries left){% else %}{% if prob7[18*2] == "1" %}1 Points Awarded{% else %}{{ prob7[18*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q19'); </script>{% endif %}<script> disable('#7-q19'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							b) white
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q20">
+								<span class="input-group-btn">
+									<button id="7-q20" class="btn btn-primary">{% if prob7[19*2+1] == "0" %}Submit (3 tries left){% elif prob7[19*2+1] != "3" %}<script> turnRed('#7-q20'); </script>{{ prob7[19*2] }} Points Awarded ({{ 3- prob7[19*2+1]|int }} tries left){% else %}{% if prob7[19*2] == "1" %}1 Points Awarded{% else %}{{ prob7[19*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q20'); </script>{% endif %}<script> disable('#7-q20'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							c) red
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q21">
+								<span class="input-group-btn">
+									<button id="7-q21" class="btn btn-primary">{% if prob7[20*2+1] == "0" %}Submit (3 tries left){% elif prob7[20*2+1] != "3" %}<script> turnRed('#7-q21'); </script>{{ prob7[20*2] }} Points Awarded ({{ 3- prob7[20*2+1]|int }} tries left){% else %}{% if prob7[20*2] == "1" %}1 Points Awarded{% else %}{{ prob7[20*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q21'); </script>{% endif %}<script> disable('#7-q21'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							d) yellow
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q22">
+								<span class="input-group-btn">
+									<button id="7-q22" class="btn btn-primary">{% if prob7[21*2+1] == "0" %}Submit (3 tries left){% elif prob7[21*2+1] != "3" %}<script> turnRed('#7-q22'); </script>{{ prob7[21*2] }} Points Awarded ({{ 3- prob7[21*2+1]|int }} tries left){% else %}{% if prob7[21*2] == "1" %}1 Points Awarded{% else %}{{ prob7[21*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q22'); </script>{% endif %}<script> disable('#7-q22'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							e) green
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q23">
+								<span class="input-group-btn">
+									<button id="7-q23" class="btn btn-primary">{% if prob7[22*2+1] == "0" %}Submit (3 tries left){% elif prob7[22*2+1] != "3" %}<script> turnRed('#7-q23'); </script>{{ prob7[22*2] }} Points Awarded ({{ 3- prob7[22*2+1]|int }} tries left){% else %}{% if prob7[22*2] == "1" %}1 Points Awarded{% else %}{{ prob7[22*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q23'); </script>{% endif %}<script> disable('#7-q23'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							f) blue
+							<div class="input-group">
+								<input class="form-control" type="text" name="7-q24">
+								<span class="input-group-btn">
+									<button id="7-q24" class="btn btn-primary">{% if prob7[23*2+1] == "0" %}Submit (3 tries left){% elif prob7[23*2+1] != "3" %}<script> turnRed('#7-q24'); </script>{{ prob7[23*2] }} Points Awarded ({{ 3- prob7[23*2+1]|int }} tries left){% else %}{% if prob7[23*2] == "1" %}1 Points Awarded{% else %}{{ prob7[23*2] }} Points Awarded (0 tries left)<script> turnRed('#7-q24'); </script>{% endif %}<script> disable('#7-q24'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+						</li>
+					</ol>
+				</div>
+
+				<hr>
+
+				<div style="color:black;">
+					<strong>Bathroom Quest (24 points)</strong><br>
+			
+					Angela You<br><br>
+
+					The problem text can be found <a href="https://www.dropbox.com/s/p7m89bd18xogstg/morecjoapeze.pdf?dl=0" target="_blank">here</a>.<br><br>
+
+					<ol>
+						<li>
+							What is the number of the door? (3 points)
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q1">
+								<span class="input-group-btn">
+									<button id="8-q1" class="btn btn-primary">{% if prob8[0*2+1] == "0" %}Submit (3 tries left){% elif prob8[0*2+1] != "3" %}<script> turnRed('#8-q1'); </script>{{ prob8[0*2] }} Points Awarded ({{ 3- prob8[0*2+1]|int }} tries left){% else %}{% if prob8[0*2] == "3" %}3 Points Awarded{% else %}{{ prob8[0*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q1'); </script>{% endif %}<script> disable('#8-q1'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+						</li>
+						<br><br>
+						<li>
+							Translate the following terms into English: (2 points each)<br><br>
+							a) wugchy
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q2">
+								<span class="input-group-btn">
+									<button id="8-q2" class="btn btn-primary">{% if prob8[1*2+1] == "0" %}Submit (3 tries left){% elif prob8[1*2+1] != "3" %}<script> turnRed('#8-q2'); </script>{{ prob8[1*2] }} Points Awarded ({{ 3- prob8[1*2+1]|int }} tries left){% else %}{% if prob8[1*2] == "2" %}2 Points Awarded{% else %}{{ prob8[1*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q2'); </script>{% endif %}<script> disable('#8-q2'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							b) buau zlyhny
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q3">
+								<span class="input-group-btn">
+									<button id="8-q3" class="btn btn-primary">{% if prob8[2*2+1] == "0" %}Submit (3 tries left){% elif prob8[2*2+1] != "3" %}<script> turnRed('#8-q3'); </script>{{ prob8[2*2] }} Points Awarded ({{ 3- prob8[2*2+1]|int }} tries left){% else %}{% if prob8[2*2] == "2" %}2 Points Awarded{% else %}{{ prob8[2*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q3'); </script>{% endif %}<script> disable('#8-q3'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							c) wlot
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q4">
+								<span class="input-group-btn">
+									<button id="8-q4" class="btn btn-primary">{% if prob8[3*2+1] == "0" %}Submit (3 tries left){% elif prob8[3*2+1] != "3" %}<script> turnRed('#8-q4'); </script>{{ prob8[3*2] }} Points Awarded ({{ 3- prob8[3*2+1]|int }} tries left){% else %}{% if prob8[3*2] == "2" %}2 Points Awarded{% else %}{{ prob8[3*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q4'); </script>{% endif %}<script> disable('#8-q4'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							d) bumnu yf
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q5">
+								<span class="input-group-btn">
+									<button id="8-q5" class="btn btn-primary">{% if prob8[4*2+1] == "0" %}Submit (3 tries left){% elif prob8[4*2+1] != "3" %}<script> turnRed('#8-q5'); </script>{{ prob8[4*2] }} Points Awarded ({{ 3- prob8[4*2+1]|int }} tries left){% else %}{% if prob8[4*2] == "2" %}2 Points Awarded{% else %}{{ prob8[4*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q5'); </script>{% endif %}<script> disable('#8-q5'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							e) ctkocylxu
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q6">
+								<span class="input-group-btn">
+									<button id="8-q6" class="btn btn-primary">{% if prob8[5*2+1] == "0" %}Submit (3 tries left){% elif prob8[5*2+1] != "3" %}<script> turnRed('#8-q6'); </script>{{ prob8[5*2] }} Points Awarded ({{ 3- prob8[5*2+1]|int }} tries left){% else %}{% if prob8[5*2] == "2" %}2 Points Awarded{% else %}{{ prob8[5*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q6'); </script>{% endif %}<script> disable('#8-q6'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							f) iymny
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q7">
+								<span class="input-group-btn">
+									<button id="8-q7" class="btn btn-primary">{% if prob8[6*2+1] == "0" %}Submit (3 tries left){% elif prob8[6*2+1] != "3" %}<script> turnRed('#8-q7'); </script>{{ prob8[6*2] }} Points Awarded ({{ 3- prob8[6*2+1]|int }} tries left){% else %}{% if prob8[6*2] == "2" %}2 Points Awarded{% else %}{{ prob8[6*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q7'); </script>{% endif %}<script> disable('#8-q7'); </script>{% endif %}</button>
+								</span>
+							</div>
+						</li>
+						<br><br>
+						<li>
+							Translate the following phrases into Cjopaze: (3 points each)<br><br>
+							a) Walk 20m, turn right.
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q8">
+								<span class="input-group-btn">
+									<button id="8-q8" class="btn btn-primary">{% if prob8[7*2+1] == "0" %}Submit (3 tries left){% elif prob8[7*2+1] != "3" %}<script> turnRed('#8-q8'); </script>{{ prob8[7*2] }} Points Awarded ({{ 3- prob8[7*2+1]|int }} tries left){% else %}{% if prob8[7*2] == "3" %}3 Points Awarded{% else %}{{ prob8[7*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q8'); </script>{% endif %}<script> disable('#8-q8'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							b) Walk until the 3rd intersection.
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q9">
+								<span class="input-group-btn">
+									<button id="8-q9" class="btn btn-primary">{% if prob8[8*2+1] == "0" %}Submit (3 tries left){% elif prob8[8*2+1] != "3" %}<script> turnRed('#8-q9'); </script>{{ prob8[8*2] }} Points Awarded ({{ 3- prob8[8*2+1]|int }} tries left){% else %}{% if prob8[8*2] == "3" %}3 Points Awarded{% else %}{{ prob8[8*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q9'); </script>{% endif %}<script> disable('#8-q9'); </script>{% endif %}</button>
+								</span>
+							</div>
+							<br>
+
+							c) Face north.
+							<div class="input-group">
+								<input class="form-control" type="text" name="8-q10">
+								<span class="input-group-btn">
+									<button id="8-q10" class="btn btn-primary">{% if prob8[9*2+1] == "0" %}Submit (3 tries left){% elif prob8[9*2+1] != "3" %}<script> turnRed('#8-q10'); </script>{{ prob8[9*2] }} Points Awarded ({{ 3- prob8[9*2+1]|int }} tries left){% else %}{% if prob8[9*2] == "3" %}3 Points Awarded{% else %}{{ prob8[9*2] }} Points Awarded (0 tries left)<script> turnRed('#8-q10'); </script>{% endif %}<script> disable('#8-q10'); </script>{% endif %}</button>
+								</span>
+							</div>
+
+						</li>
+					</ol>
+				</div>
+			</h4>
+		</div>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script src="/static/flipclock.js"></script>
+	
+	<script>
+		window.initClock = function() {
+			$('.clock').empty();
+
+			var a = new Date();
+			var b = new Date(Date.UTC(2014, 10, 15, 23, 59, 59));
+			var difference = (b - a) / 1000;
+			
+			window.clock = $('.clock').FlipClock( difference, {
+				clockFace: 'DailyCounter'
+			});
+
+			// window.clock.start(function() {});
+
+			//window.clock.setTime(3600);
+			window.clock.setCountdown(true);
+			window.clock.start(function() {});
+		};
+		
+		$(initClock);
+		setInterval(initClock, 15000);
+
+		$("nav a[href='/challenges']").addClass("active");
+
+		// submit script below
+
+		$('#6-q1, #6-q2 , #6-q3 , #6-q4 , #6-q5 , #6-q6 , #6-q7').click(function () {
+				var ans = $("input[name='"+this.id+"']").val();
+				var prob = "6";
+				checkAnswer("#"+this.id, prob, ans);
+				return true;
+
+			});
+
+		$('#7-q1, #7-q2 , #7-q3 , #7-q4 , #7-q5 , #7-q6 , #7-q7 , #7-q8 , #7-q9 , #7-q10 , #7-q11 , #7-q12 , #7-q13 , #7-q14 ,#7-q15 , #7-q16 , #7-q17 , #7-q18 , #7-q19, #7-q20, #7-q21, #7-q22, #7-q23, #7-q24').click(function () {
+				var ans = $("input[name='"+this.id+"']").val();
+				var prob = "7";
+				checkAnswer("#"+this.id, prob, ans);
+				return true;
+
+			});
+
+		$('#8-q1, #8-q2 , #8-q3 , #8-q4 , #8-q5 , #8-q6 , #8-q7, #8-q8, #8-q9, #8-q10').click(function () {
+				var ans = $("input[name='"+this.id+"']").val();
+				var prob = "8";
+				checkAnswer("#"+this.id, prob, ans);
+				return true;
+
+			});
+
+		
+
+		function checkAnswer(button_id, prob, ans) {
+			$button = $(button_id);
+			if (ans.trim() == '' || $button.html() == "Checking...") {
+				return;
+			}
+			
+			$inputGroup = $button.parent().parent();
+			$button.attr('class', 'btn btn-warning');
+			$inputGroup.attr('class', 'input-group has-warning');
+			$button.html("Checking...");
+			//var ans = $("input[name='q1']").val();
+			//var prob = "1";
+			if (button_id.length >= 4) {
+				var prob_num = button_id.substring(4,button_id.length);
+			}
+			else {
+				var prob_num = button_id.substring(2,button_id.length);
+			}
+			
+			var d = {'ans':ans, 'prob':prob, 'prob_num':prob_num};
+			$.ajax({
+				type: "POST",
+				url: '/challenges',
+				data: d,
+				dataType: 'json',
+				success: function(data,status){
+					$button.attr('class', 'btn btn-primary');
+					
+					if (parseInt(data.tries.toString()) == -1) {
+						$button.attr('disabled', 'disabled');
+						$button.attr('class', 'btn btn-danger');
+						$inputGroup.attr('class', 'input-group has-error');
+						$button.html("No Tries left");
+					}
+					else if (data.correct == "Yes") {
+						$button.attr('class', 'btn btn-success');
+						$inputGroup.attr('class', 'input-group has-success');
+						$button.attr('disabled', 'disabled');
+						$inputGroup.children('input').attr('disabled', 'disabled');
+						$button.html(data.points.toString()+" Points Awarded");
+					}
+					else {
+						$button.attr('class', 'btn btn-danger');
+						$inputGroup.attr('class', 'input-group has-error');
+						$button.html(data.points.toString()+" Points Awarded ("+data.tries.toString()+" tries left)");
+						if (parseInt(data.tries.toString()) == 0) {
+							$button.attr('disabled', 'disabled');
+						}
+					}
+				}
+			});
+		}
+
+		$("input[type='number']").keydown(function (e) {
+			// Allow: backspace, delete, tab, escape, enter and .
+			if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+				 // Allow: Ctrl+A
+				(e.keyCode == 65 && e.ctrlKey === true) || 
+				 // Allow: home, end, left, right
+				(e.keyCode >= 35 && e.keyCode <= 39)) {
+					 // let it happen, don't do anything
+					 return;
+			}
+			// Ensure that it is a number and stop the keypress
+			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+				e.preventDefault();
+			}
+		});
+	</script>
+{% endblock %}

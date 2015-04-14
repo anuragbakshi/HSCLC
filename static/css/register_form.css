@@ -1,0 +1,66 @@
+html, body {
+	width: auto !important;
+	overflow: hidden !important;
+}
+
+body {
+	/*font-family: "Noto Sans Symbols", "Helvetica Neue", "Helvetica", sans-serif;*/
+	font-family: "Calibri", sans-serif;
+	background: linear-gradient(rgba(44, 160, 44, 0.5), rgba(44, 160, 44, 0.5)), url('/static/img/bg/sos.png');
+}
+
+section {
+	text-align: center;
+	padding: 15vh;
+}
+
+.btn-custom {
+	width: 200px;
+	background: none;
+	border: 1px solid #d5ffe6;
+	padding: 10px 20px;
+	margin: 10px;
+	
+	color: #aaffcc;
+	
+	font-size: 15px;
+}
+
+.btn-custom:hover {
+	color: #aaffcc;
+}
+
+#braille-title {
+	font-family: "Noto Sans Symbols";
+	color: #afe9af;
+	font-size: 70px;
+}
+
+#section-title {
+	color: white;
+}
+
+#register-form {
+	padding: 50px;
+}
+
+#register-form *:not([type="submit"]) {
+	width: 500px;
+	margin: 0 auto;
+}
+
+#register-form .invalid {
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+	border-color:#a94442;
+}
+
+#register-form .invalid:focus {
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+	border-color:#843534;
+}
+
+label.invalid {
+	display: none !important;
+}

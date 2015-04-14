@@ -1,0 +1,74 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}Resources{% endblock %}
+
+{% block content %}
+	<div id="resources-page" class="aux-content">
+		<p>
+			The following are selected former NACLO problems representative of the difficulty of the challenge rounds.
+			
+			<br><br>
+			
+			Easy:
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-A.pdf">What's the Time in Tallinn?</a> <a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-AS.pdf">Solution</a>
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-E.pdf">Visible Speech</a>	<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-ES.pdf">Solution</a>
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2012/N2012-A.pdf">Cat and Mouse Story</a>	<a href="http://www.naclo.cs.cmu.edu/problems2012/N2012-AS.pdf">Solution</a>
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2011/B.pdf">Mix Up on the Farm</a>	<a href="http://www.naclo.cs.cmu.edu/problems2011/BS.pdf">Solution</a>
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2010/A.pdf">Gelda's House of Gelbelgarg</a>	<a href="http://www.naclo.cs.cmu.edu/problems2010/AS.pdf">Solution</a>
+			
+			<br><br>
+			
+			Medium:
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2010/C.pdf">Lost in Yerevan</a>	<a href="http://www.naclo.cs.cmu.edu/problems2010/CS.pdf">Solution</a>
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2012/N2012-G.pdf">Haitian Creole</a>	<a href="http://www.naclo.cs.cmu.edu/problems2012/N2012-GS.pdf">Solution</a>
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2013/N2013-J.pdf">Stockholms Tunnelbana</a>	<a href="http://www.naclo.cs.cmu.edu/problems2013/N2013-JS.pdf">Solution</a>
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-F.pdf">Lontara</a>	<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-FS.pdf">Solution</a>
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-C.pdf">Levenshtein's Fine Signs</a>	<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-CS.pdf">Solution</a>
+			
+			<br><br>
+			
+			Problems with Computational Concepts:
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-O.pdf">CCG</a>
+			<a href="http://www.naclo.cs.cmu.edu/problems2014/N2014-P.pdf">Combining Categories in Tok Pisin</a>
+			
+			<br><br>
+			
+			Hard:
+			<br>
+			<a href="http://www.naclo.cs.cmu.edu/problems2012/N2012-D.pdf">All in the Family</a>
+			
+			<br><br>
+			
+			Insane:
+			<br>
+			<a href="http://www.ioling.org/booklets/iol-2011-team-prob.en-us.pdf">Sanskrit Poetry</a> (don’t use the hints)
+			<br>
+			<a href="http://www.ioling.org/booklets/iol-2013-team-prob.en-us.pdf">Georgian List</a> (heheh)
+			
+			<br><br>
+			
+			The full NACLO past problems list can be found <a href="http://www.naclo.cs.cmu.edu/practice.html">here</a>. In general, the open round problems are the range of difficulty expected for our weekly challenges; the NACLO invitational round problems are representative of the difficulty of our invites. Our question and answer format will also largely mirror that of NACLO problems, with the exception of a few questions requiring code solutions and a few questions with non-textual clues.
+			
+			<br><br>
+			
+			The NACLO site also has a wonderful <a href="http://www.naclo.cs.cmu.edu/resources.html">suggested readings list</a> that will assist in getting started in computational linguistics. In particular, this <a href="http://www.naclo.cs.cmu.edu/resources.html">ILO Training Handout</a> provides great insight into how to tackle linguistics problems.
+		</p>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		$("nav a[href='/resources']").addClass("active");
+	</script>
+{% endblock %}

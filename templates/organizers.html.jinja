@@ -1,0 +1,30 @@
+
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}Organizers{% endblock %}
+
+{% block content %}
+	<div id="orgranizers-page" class="aux-content">
+		<p>
+			Co-Directors
+			
+			<br><br>
+			
+			Publicity
+			
+			<br><br>
+			
+			Questions
+			
+			<br><br>
+			
+			Web
+		</p>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		$("nav a[href='/organizers']").addClass("active");
+	</script>
+{% endblock %}

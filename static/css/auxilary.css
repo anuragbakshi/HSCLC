@@ -1,0 +1,141 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(rgba(44, 160, 44, 0.5), rgba(44, 160, 44, 0.5)), url('/static/img/bg/sos.png');
+	font-family: "PT Sans";
+}
+
+/* header */
+header {
+	/*float: left;*/
+	/*width: 40%;*/
+	/*margin: 0 auto;*/
+	padding: 60px;
+	text-align: center;
+	/*margin: 0;*/
+	/*display: inline-block;*/
+}
+
+nav {
+	color: #aaffcc;
+	text-align: center;
+	font-size: 22px;
+}
+
+a {
+	color: #aaffcc;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #2ca02c;
+}
+
+a.active {
+	color: white;
+}
+
+/* auxilary */
+#aux-wrapper {
+	width: 60%;
+	margin: 0 auto;
+	/*padding: 100px;*/
+}
+
+.aux-content {
+	margin: 0 auto;
+	width: 85%;
+	
+	font-size: 18px;
+	/*float: right;*/
+
+	color: #d7f4d7;
+	/*color: white;*/
+	text-align: justify;
+	/*text-align: left;*/
+}
+
+#braille-title {
+	padding: 10px;
+
+	font-family: "Noto Sans Symbols";
+	font-size: 70px;
+	color: #afe9af;
+}
+
+#question {
+	/*text-align: left;*/
+}
+
+#response-form {
+	padding: 25px;
+	text-align: center;
+}
+
+#dashboard-page {
+	text-align: center;
+}
+
+#score-history {
+	margin: 0 auto;
+	font-size: 20px;
+}
+
+#score-history th {
+	padding: 10px;
+}
+
+/* prizes */
+#prizes-page {
+	text-align: center;
+	font-size: 14pt;
+}
+
+.prize-detail {
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+/* challenges */
+.problem-form input {
+	margin: 10px 0;
+}
+
+/* footer */
+footer {
+	padding: 20px;
+	margin-top: 100px;
+
+	text-align: center;
+	font-size: 14px;
+	color: #2ca02c;
+
+	background: #d7f4d7;
+}
+
+footer p {
+	margin: 0;
+}
+
+#aux-wrapper {
+	min-height: 100%;
+	margin: 0 auto -130px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, .push {
+	height: 80px; /* '.push' must be the same height as 'footer' */
+}
+
+/*#creators-attrib {
+	color: #aaffcc;
+}
+
+#school-attrib {
+	color: white;
+}*/

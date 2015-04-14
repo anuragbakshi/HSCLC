@@ -1,0 +1,57 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block content %}
+	<section id="weekly-challenge" class="col-scheme-b">
+		<div class="row">
+			<div class="col-12">
+
+				<link rel="stylesheet" href="/static/flipclock.css">
+
+
+				<div class="clockman col-md-offset-8"></div>
+				<div class="message"></div>
+				
+				<!-- weekly challenge -->
+				<!-- <h1 class="braille">&#10298;&#10257;&#10257;&#10245;&#10247;&#10301; &#10273;&#10241;&#10247;&#10247;&#10274;&#10267;&#10257;</h1> -->
+				<h3 class="section-title text-center" style="alignment:center;"><b>WEEKLY CHALLENGE</b></h3>
+
+				<br>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices at mi a tincidunt. Ut semper id orci varius finibus. Phasellus suscipit metus ut libero posuere tempus. Cras ut malesuada massa. Nulla eget velit libero. Pellentesque non tristique quam. Aenean ac pellentesque mauris, et convallis ex. Sed mollis, lorem sed pretium facilisis, felis metus vulputate massa, eget rutrum ante velit a elit. In suscipit suscipit lorem, id lobortis tellus mollis a. Morbi id nisi rhoncus, sollicitudin orci non, commodo tellus. Maecenas felis justo, blandit at scelerisque ac, tincidunt sed purus. Maecenas sollicitudin est id elit facilisis lacinia ut ac dolor. Nam sed leo eros. Donec purus lectus, elementum quis porttitor quis, vulputate venenatis magna. Quisque nec maximus felis. Maecenas convallis mi eu diam tempor, ut ornare mauris egestas.</p>
+
+				<a class="btn btn-custom offset2">&#10255;&#10263;&#10261;&#10300;&#10253;&#10300;&#10241;<br>EASY</a>
+				<a class="btn btn-custom text-center">&#10255;&#10263;&#10261;&#10300;&#10253;&#10300;&#10243;<br>CHALLENGING</a>
+
+
+	            <input id="answer" name="answer" type="text" class="form-control"  placeholder="Your Answer">
+	              
+
+				<br><br>
+			</div>
+		</div>
+	</section>
+
+	<script src="/static/js/jquery.js"></script>
+	<script src="/static/flipclock.min.js"></script>
+
+	<script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+
+			var a = new Date();
+			var b = new Date("October 25, 2014 11:59:59");
+			var difference = (b - a) / 1000;
+			
+			clock = $('.clockman').FlipClock( difference, {
+		        clockFace: 'DailyCounter'
+		    });
+
+		   // clock.start(function() {});
+
+		    //clock.setTime(3600);
+		    clock.setCountdown(true);
+		    clock.start(function() {});
+		});
+	</script>
+{% endblock %}

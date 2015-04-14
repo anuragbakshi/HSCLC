@@ -1,0 +1,49 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}HSCLC{% endblock %}
+
+{% block style %}index.css{% endblock %}
+
+{% block body %}
+	<section id="intro" class="col-scheme-a">
+		<div class="row">
+			<div class="col-12">
+				<!-- hsclc -->
+				<h1 id="braille-title" class="braille">&#10259;&#10254;&#10249;&#10247;&#10249;</h1>
+				<!-- <h3 id="title" class="section-title">HIGH SCHOOL COMPUTATIONAL LINGUISTICS CHALLENGE</h3> -->
+				<h3 id="title" class="section-title">
+					<span>high school computational linguistics competition</span>
+					<span>مسابقة لغوية حاسوبية لمدرسة ثانوية</span>
+					<span>高中计算机语言竞赛</span>
+					<span>la concurrence de la linguistique computationnelle de lycée</span>
+					<span>gymnasium computerlinguistik wettbewerb</span>
+					<span>γυμνάσιο υπολογιστική γλωσσολογία ανταγωνισμού</span>
+					<span>उच्च विद्यालय कम्प्यूटेशनल भाषा विज्ञान प्रतियोगिता</span>
+					<span>고등학교 전산언어학 경시대회</span>
+					<span>старшая школа вычислительная лингвистика конкуренция</span>
+				</h3>
+				<h4 id="date">10.27.14 - 12.20.14</h4>
+
+				{% if is_signed_in %}
+					<a href="/sign_out" class="btn btn-custom">SIGN OUT</a>
+					<a href="/challenges" id="weekly-challenge-text" class="btn btn-custom">FINAL CHALLENGE</a>
+				{% else %}
+					<a href="/sign_in" class="btn btn-custom"><span id="signin-icon" class="fa fa-google-plus"></span>&nbsp;&nbsp;SIGN IN/REGISTER</a>
+				{% endif %}
+				
+				<a href="/about" class="btn btn-custom">INFORMATION</a>
+			</div>
+		</div>
+
+		<div id="supporters" class="row">
+			<div class="col-12">
+				<h2>SUPPORTED BY</h2>
+				<a href="http://www.wolfram.com" target="_blank"><img id="wolfram-logo" src="/static/img/wolfram.png" alt="Wolfram"></a>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block scripts %}
+	<script src="/static/js/main.js"></script>
+{% endblock %}

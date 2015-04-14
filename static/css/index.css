@@ -1,0 +1,81 @@
+html, body {
+	width: auto !important;
+	overflow: hidden !important;
+}
+
+body {
+	/*font-family: "Noto Sans Symbols", "Helvetica Neue", "Helvetica", sans-serif;*/
+	font-family: "PT Sans";
+}
+
+section {
+	text-align: center;
+	padding: 50px;
+}
+
+#intro {
+	background: linear-gradient(rgba(44, 160, 44, 0.5), rgba(44, 160, 44, 0.5)), url('/static/img/bg/sos.png');
+}
+
+#intro .btn-custom {
+	width: 200px;
+	border: 1px solid #d5ffe6;
+	padding: 10px 20px;
+	margin: 10px;
+	
+	color: #aaffcc;
+	
+	font-size: 15px;
+}
+
+.braille {
+	font-family: "Noto Sans Symbols";
+}
+
+#intro .braille {
+	color: #afe9af;
+}
+
+#intro .section-title {
+	color: white;
+}
+
+#intro {
+	height: 100vh;
+	padding: 17vh 0;
+}
+
+#braille-title {
+	font-size: 70px;
+}
+
+#title {
+	padding-bottom: 0;
+	text-transform: uppercase;
+}
+
+#date {
+	color: #d7f4d7;
+}
+
+#signin-icon {
+	font-size: 18px;
+	/*color: #e74537;*/
+}
+
+#intro h1, h2, h3, h4, h5 {
+	padding: 10px;
+}
+
+#supporters {
+	padding: 20px;
+	color: white;
+}
+
+#supporters h2 {
+	margin: 10px;
+}
+
+#wolfram-logo {
+	height: 20vh;
+}

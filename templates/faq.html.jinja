@@ -1,0 +1,52 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+	<div id="faq-page" class="aux-content">
+		<p>
+			<strong>What is Computational Linguistics?</strong>
+			<br>
+			Computational Linguistics is an exciting field combining linguistics and computer science - it is largely concerned with the modeling of natural language from a computational perspective. Computers are great at doing tasks at great speed and accuracy - computational; computational linguistics seeks to use this efficiency to process and analyze language.
+			<br><br>
+			<strong>Who can participate in HSCLC?</strong>
+			<br>
+			All current high and middle school students (as of September 15th)! We especially welcome home-schooled students and international students. It doesn't matter where you are. As long as you're in high or middle school (or equivalent) and have an internet connection and firing synapses - you can and should participate!
+			<br><br>
+			<strong>How do I register?</strong>
+			<br>
+			Go to our <a href="/">home page</a> and click the "Sign In" button. Then, complete the incredibly challenging registration survey (comprising questions such as "First Name") and you're registered! 
+			<br><br>
+			<strong>How do I get my scores / check my progress?</strong>
+			<br>
+			All of your contest info is on the <a href="/dashboard">Dashboard</a> page.
+			<br><br>
+			<strong>How often are the challenges?</strong>
+			<br>
+ber
+			Challenges are weekly. The challenge rounds will run between of October 26th and December 9th. Challenges will be released on Monday at noon; solutions must be submitted by Friday at noon. Full solutions will be posted on the <a href="/resources">Resources</a> page on Sunday at noon; individual results will be available on the <a href="/dashboard">Dashboard</a> page the following Monday.
+			<br><br>
+			<strong>What does each challenge comprise?</strong>
+			<br>
+			Each challenge will be composed of one relatively simple problem and one rather involved problem. Some weeks, we may append an optional coding challenge that will expand on more theoretical concepts exposed in the normal challenges.
+			<br><br>
+			<strong>What is invitational round?</strong>
+			<br>
+			The invitational round is a timed three-hour test with rather challenging questions (think NACLO invites). Invitation will be based on completion of and performance on the weekly challenge rounds. We hesitate to release invites criteria, as people might meet the criteria and slack on their remaining challenges, which is simply no fun. Criteria will be announced after the last weekly challenge and a full roster of invitees will be posted on the home page. Participants in the invites get flashy HSCLC t-shirts!
+			<br><br>
+			<strong>Can I use [insert resource here] as a resource?</strong>
+			<br>
+			In general, no. All solutions should come directly from your thinking - all problems are tested for solvability by NACLO Semi-Finalists. 
+			<br><br>
+			<strong>How do I request a clarification of a problem?</strong>
+			<br>
+			<a href="mailto:clarifications@hsc.lc">Shoot us an email</a>. We'll try to answer in a manner that clarifies the problem while preserving an equal playing field for all participants.
+		</p>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		$("nav a[href='/faq']").addClass("active");
+	</script>
+{% endblock %}

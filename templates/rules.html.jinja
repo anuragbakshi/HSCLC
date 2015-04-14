@@ -1,0 +1,45 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}Rules{% endblock %}
+
+{% block content %}
+	<div id="contest-rules-page" class="aux-content">
+		<p>
+			HSCLC comprises five weekly challenge rounds and an invitational timed contest. The challenge rounds will run between the October 26th and November 9th. Challenges will be released on Friday at noon; solutions must be submitted by Wednesday at noon. Full solutions will be posted on the <a href="/resources">Resources</a> page on Friday at noon; individual results will be available on the <a href="/dashboard">Dashboard</a> page the following Saturday. We encourage participants to discuss the problems <strong>after their submission deadlines</strong> on our <a href="/forum">Forum</a>.
+			
+			<!-- <br><br>
+
+			Full rules and contest information are available [here]. -->
+			
+			<br><br>
+
+			Honor Code:
+			<br>
+			Participants will not attempt to gain knowledge on aspects of a language not explicitly given in the problem statement. Problems are meant to be self-contained and are designed to assume no prior knowledge of the languages tested; to use the internet or other resources to assist in solving HSCLC problems is strictly prohibited.
+			
+			<br><br>
+
+			Of course, we have few means of ensuring that the honor code is upheld. That is why we place full trust on participants to act in accordance to the spirit of honor code. 
+			
+			<br><br>
+
+			In Laymans Terms:
+			<br>
+			To be honest, there is no incentive to cheat. There are no monetary prizes, no official honors. Qualifying for the invitational round is fantastic, but cheating on the weekly challenges will simply render one incapable of solving the challenging questions found on the timed test.
+			
+			<br><br>
+
+			Computational linguistics problems are meant to be engaging and enjoyable! The entire appeal in these questions is being thrown into a wholly foreign linguistic environment and using only logic and perseverance to make sense of it. Cheating on these questions only makes them less enjoyable and less worthwhile.
+			
+			<br><br>
+
+			If you must know the answers to the challenges, feel free to use resources to obtain them; DO NOT submit the solutions as your own work.
+		</p>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		$("nav a[href='/rules']").addClass("active");
+	</script>
+{% endblock %}

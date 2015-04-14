@@ -1,0 +1,58 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+	<div id="dashboard-page" class="aux-content">
+		<h2>{{ user_name }}</h2>
+
+		<table id="score-history">
+			<thead>
+				<tr>
+					<th>Week</th>
+					<th>Total Points</th>
+					<th>Problem 1</th>
+					<th>Problem 2</th>
+					<th>Problem 3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>10/27</td>
+					<td>{{ prob1+prob2+prob3 }}</td>
+					<td>{{ prob3 }}</td>
+					<td>{{ prob1 }}</td>
+					<td>{{ prob2 }}</td>
+				</tr>
+				<tr>
+					<td>11/3</td>
+					<td>{{ prob4+prob5 }}</td>
+					<td>{{ prob4 }}</td>
+					<td>{{ prob5 }}</td>
+					<td>--</td>
+				</tr>
+				<tr>
+					<td>11/10</td>
+					<td>{{ prob6+prob7+prob8 }}</td>
+					<td>{{ prob6 }}</td>
+					<td>{{ prob7 }}</td>
+					<td>{{ prob8 }}</td>
+				</tr>
+				<tr>
+					<td>All weeks</td>
+					<td>{{ total }}</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script src="/static/js/jquery.js"></script>
+	<script>
+		$("nav a[href='/dashboard']").addClass("active");
+	</script>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html.jinja" %}
+
+{% block style %}auxilary.css{% endblock %}
+
+{% block body %}
+	<div id="aux-wrapper">
+		{% include "header.html.jinja" %}
+	
+		{% block content %}{% endblock %}
+
+		<div class="push"></div>
+	</div>
+
+	{% include "footer.html.jinja" %}
+{% endblock %}

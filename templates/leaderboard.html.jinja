@@ -1,0 +1,118 @@
+{% extends "auxilary.html.jinja" %}
+
+{% block title %}Leaderboard{% endblock %}
+
+{% block content %}
+	<div id="leaderboard-page" class="aux-content">
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Place</th>
+					<th>Name</th>
+					<th>Affiliation</th>
+					<th>Country/State</th>
+					<th>Score</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- {% for l in leaders %}
+					<tr>
+						<td>{{ l.rank }}</td>
+						<td>{{ l.name }}</td>
+						<td>{{ l.school }}</td>
+						<td>{{ l.state }}</td>
+						<td>{{ l.score }}</td>
+					</tr>
+				{% endfor %} -->
+				<tr>
+					<td>1</td>
+					<td>Jeffrey Chang</td>
+					<td>Lynbrook</td>
+					<td>California</td>
+					<td>290</td>
+
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Gabriel Alves da Silva Diniz</td>
+					<td>Colégio ETAPA</td>
+					<td>Brazil</td>
+					<td>255</td>
+
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Yijin Kang</td>
+					<td>Bergen County Academies</td>
+					<td>New Jersey</td>
+					<td>236</td>
+
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Laurestine Bradford</td>
+					<td>Ingraham High School</td>
+					<td>Washington</td>
+					<td>194</td>
+
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Alya Podrezova</td>
+					<td>igdcsg</td>
+					<td>Russian Federation</td>
+					<td>194</td>
+
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>David Song</td>
+					<td>Bergen County Academies</td>
+					<td>New Jersey</td>
+					<td>190</td>
+
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Vladyslav Verteletskyi</td>
+					<td>Ukrainian Physics and Mathematics Lyceum</td>
+					<td>Ukraine</td>
+					<td>155</td>
+
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>V M</td>
+					<td>OMG</td>
+					<td>Bulgaria</td>
+					<td>151</td>
+
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>David Yang</td>
+					<td>Bergen County Academies</td>
+					<td>New Jersey</td>
+					<td>139</td>
+
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>Magdalena Dakeva</td>
+					<td>Geo Milev Math High School</td>
+					<td>Bulgaria</td>
+					<td>138</td>
+
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+		$("nav a[href='/leaderboard']").addClass("active");
+	</script>
+{% endblock %}
